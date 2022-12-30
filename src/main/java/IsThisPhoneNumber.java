@@ -46,23 +46,23 @@ public class IsThisPhoneNumber {
         if (firstTest()){
             makeList();
         }else {
-            System.out.println("invalid number");
+            System.out.println("Invalid number...");
             return false;
         }
         if (this.numbers.size()>14||this.numbers.size()<11){
-            System.out.println("sayisal degerler 14 ten fazla veya 11 den az");
+            System.out.println("Sayisal degerler 14 ten fazla veya 11 den az...");
             return false;
         }else{
-            System.out.println("sayisal degerler uygun");
+            System.out.println("Sayisal degerler uygun...");
         }
         if (secondTest()) {
-            System.out.println("ikinci test gecildi");
+            System.out.println("Ikinci test gecildi...");
         }else {
-            System.out.println("parantezle yanlış");
+            System.out.println("Parantezle yanlış...");
             return false;
         }
 
-        System.out.println("gecerli numara");
+        System.out.println("Bu bir telefon numarasi...");
         return true;
     }
 
@@ -82,7 +82,7 @@ public class IsThisPhoneNumber {
 
         System.out.println(this.allChar);
         if (counter == this.number.length()) {
-            System.out.println("karakter testini gecti...");
+            System.out.println("Karakter testini gecti...");
             return true;
             }
 
@@ -92,20 +92,20 @@ public class IsThisPhoneNumber {
         public boolean secondTest(){
            if (this.number.charAt(0) == '(') {
                 if (this.number.charAt(3) == ')' || this.number.charAt(4) == ')') {
-                    System.out.println("parantezler dogru yerde!");
+                    System.out.println("Parantezler dogru yerde!...");
                 }else{
-                    System.out.println("invalid number! brackets are wrong!");
+                    System.out.println("Invalid number! Brackets are wrong!...");
                     return false;
                 }
             }
            if (this.number.charAt(this.number.length() - 11) == '0') {
                System.out.println(this.number.charAt(this.number.length() - 11));
-               System.out.println("sondan 11 inci karakter 0 testi gecti");
+               System.out.println("Sondan 11 inci karakter 0 testi gecti...");
 
 
             }else{
                System.out.println(this.number.charAt(this.number.length() - 11));
-               System.out.println("sehir alan kodu 0 ile baslamali");
+               System.out.println("Sehir alan kodu 0 ile baslamali...");
                return false;
            }
 
@@ -115,21 +115,20 @@ public class IsThisPhoneNumber {
         public void makeList(){
             for (int i = 0; i < this.number.length(); i++) {
                 if (this.number.charAt(i) == '+') {
-                    System.out.println("+ eklendi");
+                    System.out.println("+ eklendi...");
                     this.characters.add(this.number.charAt(i));
                 } else if (this.number.charAt(i) == '(') {
-                    System.out.println("( eklendi");
+                    System.out.println("( eklendi...");
                     this.characters.add(this.number.charAt(i));
                 } else if (this.number.charAt(i) == ')') {
-                    System.out.println(") eklendi");
+                    System.out.println(") eklendi...");
                     this.characters.add(this.number.charAt(i));
                 }else {
-                    System.out.println("numara eklendi");
+                    //System.out.println("Numara eklendi...");
                     this.numbers.add(this.number.charAt(i));
                 }
             }
-            System.out.println(this.characters);
-            System.out.println(this.numbers);
+
         }
 
     }

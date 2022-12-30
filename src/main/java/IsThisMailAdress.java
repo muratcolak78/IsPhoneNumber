@@ -20,7 +20,7 @@ public class IsThisMailAdress {
         if (!firstTest(this.adress)) return false;
         if (!secondTest()) return false;
         if (!thirdTest()) return false;
-        else System.out.println(" bu bir mail adresi");
+        else System.out.println("\nBu bir mail adresi...");
         return true;
     }
 
@@ -34,11 +34,11 @@ public class IsThisMailAdress {
             }
         }
         if (counter == this.keyWords.size()) {
-            System.out.println("@ ve mail.com karakterlerden "+counter+" tane barindiriyor. ");
+            System.out.println("@ ve mail.com karakterlerden "+counter+" tane barindiriyor.... ");
             return true;
         }
 
-        System.out.println("\"@ ve mail.com karakterlerini barindirmiyor.. Bu bir mail adresi degil");
+        System.out.println("\"@ ve mail.com karakterlerini barindirmiyor.. \nBu bir mail adresi degil...");
         return false;
     }
 
@@ -52,10 +52,10 @@ public class IsThisMailAdress {
         }
 
         if (counter == 0) {
-            System.out.println("adreste bos karakter yok");
+            System.out.println("Adreste bos karakter yok...");
             return true;
         } else {
-            System.out.println("adreste bosluk karakteri var bu bir mail adresi olamaz");
+            System.out.println("Adreste bosluk karakteri var bu bir mail adresi olamaz...");
             return false;
         }
         
@@ -69,10 +69,10 @@ public class IsThisMailAdress {
             }
         }
         if (counter == 1) {
-            System.out.println("temel adreslerden biri var ");
+            System.out.println("Temel adreslerden biri var... ");
             return true;
         } else {
-            System.out.println("temel adreslerden biri yok ");
+            System.out.println("Temel adreslerden biri yok... ");
             return false;
         }
     }
